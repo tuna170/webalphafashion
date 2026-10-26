@@ -1,0 +1,650 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đỗ Công Luận | Personal Portfolio</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+        :root {
+            --green: #74c043;
+            --dark-green: #315f22;
+            --white: #ffffff;
+            --black: #151a13;
+            --gray: #737a70;
+            --light-green: #f0f8e9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--white);
+            color: var(--black);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid #e8eee4;
+        }
+
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 25px;
+            font-weight: 700;
+            letter-spacing: -2px;
+        }
+
+        .logo span {
+            color: var(--green);
+        }
+
+        nav {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--green);
+        }
+
+        /* Trang chu */
+        .hero {
+            min-height: 100vh;
+            padding: 150px 8% 80px;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(circle at 85% 30%, #e1f6d3, transparent 35%),
+                white;
+        }
+
+        .hero-content {
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 10px 18px;
+            background: var(--light-green);
+            color: var(--dark-green);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(65px, 12vw, 165px);
+            line-height: 0.95;
+            font-weight: 700;
+            letter-spacing: -8px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            color: var(--green);
+        }
+
+        .hero p {
+            max-width: 550px;
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--gray);
+            margin-top: 35px;
+        }
+
+        .hero-bottom {
+            margin-top: 55px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .btn {
+            padding: 17px 32px;
+            background: var(--green);
+            color: white;
+            font-weight: 700;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--dark-green);
+            transform: translateY(-4px);
+        }
+
+        .hero-number {
+            font-size: 13px;
+            color: var(--gray);
+            letter-spacing: 2px;
+        }
+
+        section {
+            padding: 110px 8%;
+        }
+
+        .section-label {
+            color: var(--green);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(40px, 6vw, 75px);
+            line-height: 1.1;
+            letter-spacing: -3px;
+            margin-bottom: 50px;
+        }
+
+        .about {
+            background: var(--light-green);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-visual {
+            min-height: 430px;
+            background: var(--green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-visual h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(100px, 18vw, 220px);
+            color: white;
+            letter-spacing: -15px;
+            transform: rotate(-12deg);
+        }
+
+        .about-visual::after {
+            content: "SOFTWARE ENGINEERING";
+            position: absolute;
+            bottom: 25px;
+            left: 25px;
+            color: white;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .about-text p {
+            color: #596254;
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+        }
+
+        .info-item {
+            padding: 18px 0;
+            border-bottom: 1px solid #cddfc4;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .info-item strong {
+            font-size: 14px;
+        }
+
+        .info-item span {
+            font-size: 14px;
+            color: var(--dark-green);
+            text-align: right;
+        }
+
+        .interest {
+            background: white;
+        }
+
+        .interest-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .interest-card {
+            min-height: 260px;
+            background: #f7faf4;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: 0.3s;
+        }
+
+        .interest-card:hover {
+            background: var(--green);
+            color: white;
+            transform: translateY(-8px);
+        }
+
+        .interest-card .number {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .interest-card h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 30px;
+            letter-spacing: -1px;
+        }
+
+        .interest-card p {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+        .quote-section {
+            background: var(--green);
+            color: white;
+            text-align: center;
+        }
+
+        .quote-section .section-label {
+            color: #e5ffda;
+        }
+
+        .quote-section blockquote {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(30px, 5vw, 65px);
+            line-height: 1.3;
+            letter-spacing: -2px;
+            max-width: 1050px;
+            margin: auto;
+            font-weight: 700;
+        }
+
+        .quote-section p {
+            margin-top: 35px;
+            font-size: 13px;
+            letter-spacing: 3px;
+        }
+
+        footer {
+            background: #172315;
+            color: white;
+            padding: 70px 8% 30px;
+        }
+
+        .footer-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(55px, 10vw, 130px);
+            line-height: 1;
+            letter-spacing: -6px;
+            margin-bottom: 60px;
+        }
+
+        .footer-title span {
+            color: var(--green);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            border-top: 1px solid #40503d;
+            padding-top: 25px;
+            font-size: 13px;
+            color: #a9b7a4;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(35px);
+            transition: opacity 0.8s, transform 0.8s;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 20px 5%;
+            }
+
+            nav {
+                gap: 14px;
+            }
+
+            nav a {
+                font-size: 10px;
+            }
+
+            .hero {
+                padding: 130px 5% 70px;
+            }
+
+            .hero h1 {
+                font-size: clamp(58px, 13vw, 100px);
+                letter-spacing: -4px;
+            }
+
+            section {
+                padding: 75px 5%;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .about-visual {
+                min-height: 300px;
+            }
+
+            .interest-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .interest-card {
+                min-height: 220px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+
+            .footer-title {
+                letter-spacing: -3px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<style>
+.profile-nav-bar {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 99999;
+    background: rgba(7, 91, 53, 0.92);
+    backdrop-filter: blur(8px);
+    padding: 8px 14px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.profile-nav-btn {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.2);
+    text-decoration: none !important;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.profile-nav-btn:hover {
+    background: #ffffff;
+    color: #075b35 !important;
+    transform: translateY(-1px);
+}
+.profile-nav-home {
+    background: #e0a96d;
+    color: #075b35 !important;
+    border: none;
+}
+.profile-nav-home:hover {
+    background: #ffffff;
+    color: #075b35 !important;
+}
+</style>
+
+<div class='profile-nav-bar'>
+    <a href='../../index.html' class='profile-nav-btn profile-nav-home'>🏠 Trang chủ</a>
+    <a href='../H_Anh/ca_nhan.html' class='profile-nav-btn'>❮ Hồ sơ trước</a>
+    <a href='../Lạc/Profile.html' class='profile-nav-btn'>Hồ sơ kế tiếp ❯</a>
+</div>
+
+
+    <header>
+        <a href="#home" class="logo">DCL<span>.</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#interest">Lifestyle</a>
+            <a href="#mindset">Mindset</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content reveal">
+                <div class="tag">Personal Profile / 2026</div>
+
+                <h1>
+                    DO CONG<br>
+                    <span>LUAN.</span>
+                </h1>
+
+                <p>
+                    Xin chào! Mình là Đỗ Công Luận,
+                    sinh viên năm 2 ngành Kỹ thuật phần mềm
+                    tại Đại học Bình Dương.
+                    Luôn tìm kiếm cơ hội học hỏi,
+                    phát triển bản thân và khám phá công nghệ.
+                </p>
+
+                <div class="hero-bottom">
+                    <a href="#about" class="btn">Khám phá bản thân ↗</a>
+                    <span class="hero-number">01 / 04</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="section-label reveal">01 / About Me</div>
+            <h2 class="section-title reveal">WHO AM I<span style="color:#74c043">?</span></h2>
+
+            <div class="about-grid">
+                <div class="about-visual reveal">
+                    <h2>DCL</h2>
+                </div>
+
+                <div class="about-text reveal">
+                    <p>
+                        Mình là Đỗ Công Luận, hiện đang theo học
+                        năm thứ hai tại Trường Đại học Bình Dương,
+                        chuyên ngành Kỹ thuật phần mềm.
+                    </p>
+
+                    <p>
+                        Mình quan tâm đến công nghệ, lập trình
+                        và cách các phần mềm được xây dựng.
+                        Mục tiêu của mình là phát triển kiến thức
+                        nền tảng vững chắc để ứng dụng vào thực tế.
+                    </p>
+
+                    <div class="info-item">
+                        <strong>Họ và tên</strong>
+                        <span>Đỗ Công Luận</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Mã số sinh viên</strong>
+                        <span>25050009</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Trường đại học</strong>
+                        <span>Đại học Bình Dương</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Năm học</strong>
+                        <span>Sinh viên năm 2</span>
+                    </div>
+
+                    <div class="info-item">
+                        <strong>Chuyên ngành</strong>
+                        <span>Kỹ thuật phần mềm</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="interest" id="interest">
+            <div class="section-label reveal">02 / My Lifestyle</div>
+            <h2 class="section-title reveal">
+                THINGS I <span style="color:#74c043">LOVE.</span>
+            </h2>
+
+            <div class="interest-grid">
+                <div class="interest-card reveal">
+                    <span class="number">01 / GAMING</span>
+                    <h3>PLAY<br>GAMES.</h3>
+                    <p>
+                        Chơi game là sở thích cá nhân,
+                        giúp mình thư giãn sau những giờ học tập.
+                    </p>
+                </div>
+
+                <div class="interest-card reveal">
+                    <span class="number">02 / TECHNOLOGY</span>
+                    <h3>EXPLORE<br>TECH.</h3>
+                    <p>
+                        Tìm hiểu công nghệ và khám phá
+                        những kiến thức mới trong lĩnh vực phần mềm.
+                    </p>
+                </div>
+
+                <div class="interest-card reveal">
+                    <span class="number">03 / LEARNING</span>
+                    <h3>KEEP<br>LEARNING.</h3>
+                    <p>
+                        Không ngừng học hỏi, củng cố
+                        kiến thức và nâng cao kỹ năng của bản thân.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="quote-section" id="mindset">
+            <div class="section-label reveal">03 / Personal Mindset</div>
+
+            <blockquote class="reveal">
+                "PHẢI NẮM ĐƯỢC PHẦN CỐT LÕI,
+                CƠ BẢN CỦA BÀI HỌC VÀ LỜI GIẢNG
+                CỦA GIẢNG VIÊN."
+            </blockquote>
+
+            <p class="reveal">— ĐỖ CÔNG LUẬN / PERSONAL RULE</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="section-label">04 / End Of Profile</div>
+
+        <h2 class="footer-title">
+            THANK<br>
+            <span>YOU.</span>
+        </h2>
+
+        <div class="footer-bottom">
+            <span>© <span id="year"></span> Đỗ Công Luận</span>
+            <span>Software Engineering / Binh Duong University</span>
+            <a href="#home">BACK TO TOP ↑</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.1
+            }
+        );
+
+        document.querySelectorAll(".reveal").forEach((element) => {
+            observer.observe(element);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bờ rồ phai</title>
+    <link rel="stylesheet" href="mefile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+
+<style>
+.profile-nav-bar {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 99999;
+    background: rgba(7, 91, 53, 0.92);
+    backdrop-filter: blur(8px);
+    padding: 8px 14px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.profile-nav-btn {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.2);
+    text-decoration: none !important;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.profile-nav-btn:hover {
+    background: #ffffff;
+    color: #075b35 !important;
+    transform: translateY(-1px);
+}
+.profile-nav-home {
+    background: #e0a96d;
+    color: #075b35 !important;
+    border: none;
+}
+.profile-nav-home:hover {
+    background: #ffffff;
+    color: #075b35 !important;
+}
+</style>
+
+<div class='profile-nav-bar'>
+    <a href='../../index.html' class='profile-nav-btn profile-nav-home'>🏠 Trang chủ</a>
+    <a href='../Lạc/Profile.html' class='profile-nav-btn'>❮ Hồ sơ trước</a>
+    <a href='../H_Anh/ca_nhan.html' class='profile-nav-btn'>Hồ sơ kế tiếp ❯</a>
+</div>
+
+    <div class="container">
+      <aside class="sidebar">
+        <div class="sidebar-top">
+          <div class="avatar-wrapper">
+            <img
+              src="C:\alpha_fashions_websitebanao\Profile_canhannhom\Ngọc\picture2\anh_profile.jpg"
+              alt="Avatar"
+              class="avatar-img"
+            />
+            <span class="status-dot"></span>
+          </div>
+
+          <div class="profile-summary">
+            <h2>Trịnh Hồng Ngọc</h2>
+            <p class="role">CNTT / Web Developer</p>
+          </div>
+        </div>
+
+        <nav class="menu">
+          <a href="#home" class="active"
+            ><i class="fas fa-home"></i> <span>Trang chủ</span></a
+          >
+          <a href="#about"
+            ><i class="fas fa-user"></i> <span>Giới thiệu</span></a
+          >
+          <a href="#education"
+            ><i class="fas fa-graduation-cap"></i> <span>Học vấn</span></a
+          >
+          <a href="#skills"><i class="fas fa-code"></i> <span>Kỹ năng</span></a>
+          <a href="#projects"
+            ><i class="fas fa-folder-open"></i> <span>Dự án</span></a
+          >
+          <a href="#contact"
+            ><i class="fas fa-envelope"></i> <span>Liên hệ</span></a
+          >
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="social-links">
+            <a href="https://github.com/tuna170"
+              ><i class="fab fa-github"></i
+            ></a>
+          </div>
+          <p>&copy; 2026 Portfolio</p>
+        </div>
+      </aside>
+
+      <main class="main-content">
+        <section id="home" class="block hero-block">
+          <span class="badge-accent">Xin chào!</span>
+          <h1 class="hero-title">
+            Tôi là sinh viên trường <span class="blue-text">BDU</span>
+          </h1>
+          <p class="intro-lead">
+            Có hứng thú với công nghệ, thích tìm tòi kiến thức với ngành công
+            nghệ và mong muốn tạo ra những sanr phẩm hiện đại, tối ưu nhất.
+          </p>
+          <div class="hero-action">
+            <a href="#contact" class="btn btn-primary"
+              ><i class="fas fa-paper-plane"></i> Liên hệ ngay</a
+            >
+            <a href="#projects" class="btn btn-outline"
+              ><i class="fas fa-eye"></i> Xem dự án</a
+            >
+          </div>
+        </section>
+
+        <section id="about" class="block">
+          <h2 class="title">Giới Thiệu</h2>
+          <div class="info-card">
+            <p>Họ và tên: Trịnh Hồng Ngọc</p>
+            <p>Mã số sinh viên: 25050084</p>
+            <p>Năm học: Sinh viên năm 2</p>
+            <p>Chuyên Ngành: Kỹ thuật phần mềm</p>
+            <br />
+            <p>
+              Hiện tại tôi là sinh viên chuyên ngành Công nghệ Thông tin. Mặc dù
+              chưa có nhiều kinh nghiệm thực chiến, tôi luôn chủ động học hỏi
+              các điểm mới trong công nghệ hiện đại ngày nay,để có thể rèn luyện
+              thêm tư duy logic và kỹ năng thực hành qua các dự án cá nhân nhỏ
+              của bản thân.
+            </p>
+          </div>
+        </section>
+
+        <section id="education" class="block">
+          <h2 class="title">Học Vấn</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-icon"><i class="fas fa-university"></i></div>
+              <div class="timeline-content">
+                <h4>Ngành Công nghệ Thông tin</h4>
+                <span class="date">2022 — Hiện tại</span>
+                <p>hiện tại đang học tập môn cơ sở cuả ngành: Lập trình Web</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="skills" class="block">
+          <div class="toolkit-header">
+            <span class="tag-top"
+              >03 / các kỹ năng tôi đang nắm giữ hiện tại</span
+            >
+            <h2 class="title-tech">
+              Kỹ năng & <span class="blue-text">công cụ.</span>
+            </h2>
+            <p class="desc">
+              Những kỹ năng về công nghệ tôi đang học và rèn luyện thông qua
+              việc thực hành gồm:
+            </p>
+          </div>
+
+          <div class="skills-wrapper">
+            <div class="skill-card main-dev">
+              <div class="card-header">
+                <span class="num">01</span>
+                <h3>Web development</h3>
+              </div>
+
+              <div class="bar-group">
+                <div class="bar-header">
+                  <span>HTML</span>
+                  <span class="badge-status">Đang học</span>
+                </div>
+                <div class="bar-bg">
+                  <div class="bar-fill" style="width: 70%"></div>
+                </div>
+              </div>
+
+              <div class="bar-group">
+                <div class="bar-header">
+                  <span>CSS</span>
+                  <span class="badge-status">Đang học</span>
+                </div>
+                <div class="bar-bg">
+                  <div class="bar-fill" style="width: 65%"></div>
+                </div>
+              </div>
+
+              <div class="bar-group">
+                <div class="bar-header">
+                  <span>JavaScript</span>
+                  <span class="badge-status">Đang học</span>
+                </div>
+                <div class="bar-bg">
+                  <div class="bar-fill" style="width: 40%"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="skills-right-column">
+              <div class="skill-card">
+                <div class="card-header">
+                  <span class="num">02</span>
+                  <h3>Soft skills</h3>
+                </div>
+                <div class="pill-group">
+                  <span class="pill">Ham học hỏi</span>
+                  <span class="pill">Tự học</span>
+                  <span class="pill">Làm việc nhóm</span>
+                  <span class="pill">Quản lý thời gian</span>
+                  <span class="pill">Giải quyết vấn đề</span>
+                </div>
+              </div>
+
+              <div class="skill-card">
+                <div class="card-header">
+                  <span class="num">03</span>
+                  <h3>Tools I'm exploring</h3>
+                </div>
+                <div class="tool-list">
+                  <div class="tool-item">
+                    <span class="badge-icon">VS</span> Visual Studio Code
+                  </div>
+                  <div class="tool-item">
+                    <span class="badge-icon">GH</span> GitHub
+                  </div>
+                  <div class="tool-item">
+                    <span class="badge-icon">C</span> Canva
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="projects" class="block">
+          <h2 class="title">Dự Án</h2>
+          <div class="projects-grid">
+            <div class="project-card">
+              <div class="project-img-wrapper">
+                <img
+                  src="C:\alpha_fashions_websitebanao\Profile_canhannhom\Ngọc\picture2\images1.jpg"
+                  alt="Project"
+                  class="project-img"
+                />
+              </div>
+              <div class="project-info">
+                <h4>Web Cá Nhân</h4>
+                <p>
+                  Xây dựng trang cá nhân giúp giới thiệu bản thân, học vấn và kỹ
+                  năng sử dụng ngôn ngữ lập trình.
+                </p>
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-card">
+              <div class="project-img-wrapper">
+                <img
+                  src="C:\alpha_fashions_websitebanao\Profile_canhannhom\Ngọc\picture2\images2.jpg"
+                  alt="Project"
+                  class="project-img"
+                />
+              </div>
+              <div class="project-info">
+                <h4>Ứng Dụng Đang Phát Triển</h4>
+                <p>
+                  Dự án nhỏ đang thực hành xử lý giao diện và logic lập trình.
+                </p>
+                <div class="project-tags">
+                  <span>JavaScript</span>
+                  <span>UI Design</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="contact" class="block">
+          <h2 class="title">Liên Hệ</h2>
+          <div class="contact-card">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email:</strong>
+                <p>25050084@bdu.edu.vn</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone-alt"></i>
+              <div>
+                <strong>Điện thoại:</strong>
+                <p>0372493321</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Địa chỉ:</strong>
+                <p>TP. Hồ Chí Minh, Việt Nam</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

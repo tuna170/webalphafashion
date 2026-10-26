@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="vi" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nguyen Hoang Anh - Student Founder Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;
+600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cream: {
+                50: "#FBF9F5",
+                100: "#F4EFE6",
+                200: "#E8DFD1",
+              },
+              gold: {
+                400: "#E2B870",
+                500: "#D4A359",
+                600: "#B8863D",
+              },
+              charcoal: {
+                900: "#1C1A17",
+                600: "#605B54",
+                400: "#9C958A",
+              },
+            },
+            fontFamily: {
+              sans: ["Plus Jakarta Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        background-color: #fbf9f5;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        box-shadow:
+          0 20px 40px -15px rgba(212, 163, 89, 0.08),
+          0 8px 16px -6px rgba(28, 26, 23, 0.03);
+      }
+    </style>
+  </head>
+  <body
+    class="h-full min-h-screen flex items-center justify-center p-4 sm:p-6 overflow-hidden text-charcoal-900 selection:bg-gold-500/20 selection:textgold-600"
+  >
+
+<style>
+.profile-nav-bar {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 99999;
+    background: rgba(7, 91, 53, 0.92);
+    backdrop-filter: blur(8px);
+    padding: 8px 14px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+.profile-nav-btn {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.2);
+    text-decoration: none !important;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.profile-nav-btn:hover {
+    background: #ffffff;
+    color: #075b35 !important;
+    transform: translateY(-1px);
+}
+.profile-nav-home {
+    background: #e0a96d;
+    color: #075b35 !important;
+    border: none;
+}
+.profile-nav-home:hover {
+    background: #ffffff;
+    color: #075b35 !important;
+}
+</style>
+
+<div class='profile-nav-bar'>
+    <a href='../../index.html' class='profile-nav-btn profile-nav-home'>🏠 Trang chủ</a>
+    <a href='../Ngọc/mefile.html' class='profile-nav-btn'>❮ Hồ sơ trước</a>
+    <a href='../Luận/codeprofileDCL.html' class='profile-nav-btn'>Hồ sơ kế tiếp ❯</a>
+</div>
+
+    <div
+      class="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h- 80 sm:w-[450px] sm:h-[450px] bg-gold-500/10 rounded-full blur-3xl pointerevents-none"
+    ></div>
+    <main
+      class="relative w-full max-w-md glass-card border border-cream-200/80 rounded-3xl p-6 sm:p-8 space-y-6 text-center"
+    >
+      <div class="relative inline-block mx-auto">
+        <div
+          class="relative w-24 h-24 sm:w-28 sm:h-28 rounded-full p-1 bggradient-to-tr from-gold-500 to-cream-200 shadow-sm mx-auto"
+        >
+          <img
+            src="C:\alpha_fashions_websitebanao\Profile_canhannhom\H_Anh\picture3\H_anh-picture.jpg"
+            alt="Nguyen Hoang Anh Avatar"
+            class="w-full h-full object-cover rounded-full filter contrast- [1.02]"
+            onerror="
+              this.src = 'https://placehold.co/400x400/F4EFE6/1C1A17?text=MH'
+            "
+          />
+        </div>
+        <span
+          class="absolute bottom-1 right-1 px-2 py-0.5 bg-white border bordercream-200 text-gold-600 text-[10px] font-semibold rounded-full shadow-xs flex items-center gap-1"
+        >
+          <span
+            class="w-1.5 h-1.5 rounded-full bg-gold-500 animate-pulse"
+          ></span>
+          SV Năm 2
+        </span>
+      </div>
+      <!-- IDENTITY & BIO -->
+      <div class="space-y-2">
+        <h1
+          class="text-xl sm:text-2xl font-bold tracking-tight text-charcoal- 900"
+        >
+          Nguyễn Hoàng Anh
+        </h1>
+        <p
+          class="text-xs sm:text-sm font-semibold text-gold-500 tracking-wide uppercase"
+        >
+          Student Founder
+        </p>
+        <p
+          class="text-xs text-charcoal-600 leading-relaxed max-w-xs mx-auto pt-1 font-normal"
+        >
+          Đam mê xây dựng sản phẩm công nghệ đơn giản giúp sinh viên nâng cao
+          hiệu suất học tập.
+        </p>
+      </div>
+      <div
+        class="py-2 px-3 bg-cream-50/80 rounded-2xl border border-cream-200/60 flex flex-wrap justify-center items-center gap-y-2 gap-x-4 text-xs textcharcoal-600"
+      >
+        <div
+          class="flex items-center gap-1.5 hover:text-gold-600 transitioncolors"
+        >
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-gold-500"></i>
+          <a href="mailto:25050031@student.bdu.edu.vn" class="truncate"
+            >25050031@student.bdu.edu.vn</a
+          >
+        </div>
+        <div
+          class="flex items-center gap-1.5 hover:text-gold-600 transitioncolors"
+        >
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-gold-500"></i>
+          <a href="tel:0375133374">0375 133 374</a>
+        </div>
+        <div class="flex items-center gap-1.5">
+          <i data-lucide="map-pin" class="w-3.5 h-3.5 text-gold-500"></i>
+          <span>HCM, Việt Nam</span>
+        </div>
+      </div>
+      <div class="space-y-2.5 pt-1">
+        <a
+          href="25050031@student.bdu.edu.vn"
+          class="w-full py-2.5 px-4 bg-gold-500 hover:bg-gold-600 text-white font-semibold text-xs rounded-xl shadow-sm transition-all flex items-center justify-center gap-2 group"
+        >
+          <i
+            data-lucide="send"
+            class="w-3.5 h-3.5 group-hover:translate-x-0.5 transitiontransform"
+          ></i>
+          <span>Gửi Email Hợp Tác</span>
+        </a>
+        <div class="grid grid-cols-4 gap-2 pt-1">
+          <a
+            href="#"
+            target="_blank"
+            aria-label="LinkedIn"
+            class="p-2.5 bg-white border border-cream-200 hover:border-gold- 500 hover:bg-cream-50 text-charcoal-600 hover:text-gold-500 rounded-xl transition-all flex items-center justify-center"
+          >
+            <i data-lucide="linkedin" class="w-4 h-4"></i>
+          </a>
+          <a
+            href="https://github.com/NguyenHoangAnh-firak28"
+            target="_blank"
+            aria-label="GitHub"
+            class="p-2.5 bg-white border border-cream-200 hover:border-gold- 500 hover:bg-cream-50 text-charcoal-600 hover:text-gold-500 rounded-xl transition-all flex items-center justify-center"
+            >GitHub
+            <i data-lucide="github" class="w-4 h-4"></i>
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            aria-label="Facebook"
+            class="p-2.5 bg-white border border-cream-200 hover:border-gold- 500 hover:bg-cream-50 text-charcoal-600 hover:text-gold-500 rounded-xl transition-all flex items-center justify-center"
+          >
+            <i data-lucide="facebook" class="w-4 h-4"></i>
+          </a>
+          <a
+            href="#"
+            target="_blank"
+            aria-label="Globe Website"
+            class="p-2.5 bg-white border border-cream-200 hover:border-gold- 500 hover:bg-cream-50 text-charcoal-600 hover:text-gold-500 rounded-xl transition-all flex items-center justify-center"
+          >
+            <i data-lucide="globe" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+      <div class="pt-2 border-t border-cream-200/50">
+        <p
+          class="text-[10px] text-charcoal-400 font-medium tracking-wider uppercase"
+        >
+          Ng Hoang Anh • Student Founder
+        </p>
+      </div>
+    </main>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>
